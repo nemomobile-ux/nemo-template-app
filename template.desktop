@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Icon=/usr/share/%ProjectName%/icons/%ProjectName%.png
+Exec=/usr/bin/invoker --type=nemomobile -s %ProjectName%
+Name=%ProjectName%
+Name[ru]=%ProjectName%

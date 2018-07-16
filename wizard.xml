@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard version="1" kind="project"
+        class="qmakeproject" firstpage="10"
+        id="Q.NemoMobileApplication" category="F.Application"
+        featuresRequired="Mer.Wizard.Feature.SailfishOS"
+        featuresPreferred="Mer.Wizard.Feature.Emulator">
+    <description>Creates a NemoMobile Application.</description>
+    <displayname>NemoMobile Application</displayname>
+    <displaycategory>Application</displaycategory>
+    <files>
+        <file source="src/main.cpp" />
+        <file source="template.desktop" target="%ProjectName%.desktop"/>
+        <file source="icons/default.png" target="icons/%ProjectName%.png" binary="true"/>
+        <file source="template.pro" target="%ProjectName%.pro" openproject="true"/>
+        <file source="qml/pages/MainPage.qml" openeditor="true"/>
+        <file source="qml/template.qml" target="qml/%ProjectName%.qml" openeditor="true"/>
+        <file source="rpm/template.spec" target="rpm/%ProjectName%.spec"/>
+	<file source="translations/template.ts" target="translations/%ProjectName%.ts"/>
+	<file source="translations/template-ru.ts" target="translations/%ProjectName%-ru.ts"/>
+    </files>
+    <fieldpagetitle>Application Details</fieldpagetitle>
+    <fields>
+        <field mandatory="true" name="Summary">
+            <fieldcontrol class="QLineEdit" defaulttext="My first NemoMobile Application" />
+            <fielddescription>Summary:</fielddescription>
+        </field>
+        <field mandatory="true" name="Version">
+            <fieldcontrol class="QLineEdit" defaulttext="0.1" />
+            <fielddescription>Version:</fielddescription>
+        </field>
+        <field name="Description">
+            <fieldcontrol class="QTextEdit" defaulttext="This is my first NemoMobile application"/>
+            <fielddescription>Description:</fielddescription>
+        </field>
+    </fields>
+</wizard>
